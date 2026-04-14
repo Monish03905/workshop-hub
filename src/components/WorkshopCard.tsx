@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Workshop } from "@/data/workshops";
 
 interface WorkshopCardProps {
@@ -22,9 +23,9 @@ const WorkshopCard = ({ workshop }: WorkshopCardProps) => (
       <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
         {workshop.category}
       </span>
-      <button className="text-xs uppercase tracking-widest text-primary font-semibold hover:underline">
+      <Link to={`/workshop/${workshop.id}`} className="text-xs uppercase tracking-widest text-primary font-semibold hover:underline">
         View Details
-      </button>
+      </Link>
     </div>
   </div>
 );
